@@ -9,7 +9,7 @@ do {
 
             $credentials = New-Object System.Management.Automation.PSCredential -ArgumentList @($username,(ConvertTo-SecureString -String $password -AsPlainText -Force))
 
-            Start-Process powershell.exe -Credential ($credentials)
+            Start-Process powershell.exe -Credential "$credentials"
             Write-Host "Job completed"
             $Stoploop = $true
             }
